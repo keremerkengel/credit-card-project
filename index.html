@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kredi Kartı Formu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card-container"><br>
+      <!-- Kartın Ön Yüzü -->
+      <div class="front">
+        <div class="image">
+          <img src="./images/chip.png" alt="chip">
+          <img src="./images/mastercard.png" alt="visa">
+        </div>
+        <div class="card-number-box">#### #### #### ####</div>
+        <div class="flexbox">
+          <div class="box">
+            <span>Kart Sahibi</span>
+            <div class="card-holder-name">Ad Soyad</div>
+          </div>
+          <div class="box">
+            <span>Son Kullanma</span>
+            <div class="expiration">
+              <span class="exp-month">AA</span>
+              <span>/</span>
+              <span class="exp-year">YY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kartın Arka Yüzü -->
+      <div class="back">
+        <div class="stripe"></div>
+        <div class="box">
+          <span>CVV</span>
+          <div class="cvv-box"></div>
+
+        </div>
+      </div>
+
+      <!-- Kart Bilgi Formu -->
+      <form action="#" method="POST" id="card-form">
+        <div class="inputBox">
+          <span>Kart Numarası</span>
+          <input type="text" maxlength="16" class="card-number-input" placeholder="1234 5678 9012 3456" required>
+        </div>
+
+        <div class="inputBox">
+          <span>Kart Sahibinin Adı</span>
+          <input type="text" class="card-holder-input" placeholder="Ad Soyad" required>
+        </div>
+
+        <div class="flexbox">
+          <div class="inputBox">
+            <span>Son Kullanma Ay</span>
+            <select class="month-input" required>
+              <option value="" selected disabled>Ay</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="inputBox">
+            <span>Son Kullanma Yıl</span>
+            <select class="year-input" required>
+              <option value="" selected disabled>Yıl</option>
+              <option value="24">2024</option>
+              <option value="25">2025</option>
+              <option value="26">2026</option>
+              <option value="27">2027</option>
+              <option value="28">2028</option>
+              <option value="29">2029</option>
+              <option value="30">2030</option>
+            </select>
+          </div>
+          <div class="inputBox">
+            <span>CVV</span>
+            <input type="text" maxlength="3" class="cvv-input" placeholder="123" required>
+          </div>
+        </div>
+
+        <input type="submit" value="Kartı Kaydet" class="submit-btn">
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
